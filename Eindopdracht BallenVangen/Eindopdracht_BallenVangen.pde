@@ -33,6 +33,11 @@ void draw() {
   text("Score: " + score, width/2, 20);
   text("Hearts: " + lives, width/6, 20);
   
+  if (ballY + ballSize / 2 >= paddleY && ballY - ballSize / 2 <= paddleY + paddleHeight && ballX + ballSize / 2 >= paddleX && ballX - ballSize / 2 <= paddleX + paddleWidth && ballSpeed > 0){
+    resetBall();
+    score++;
+  }
+  
   if(ballY - ballSize > groundY) {
     resetBall();
     lives--;
