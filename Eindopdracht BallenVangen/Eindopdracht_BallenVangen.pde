@@ -89,5 +89,3 @@ void resetBall(){
   ballX = random(width);
   ballSpeed = 3;
 }
-  
-    
