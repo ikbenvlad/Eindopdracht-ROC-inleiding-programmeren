@@ -14,7 +14,7 @@ void setup() {
   size(600, 400);
   ballX = random(width);
   ballY = 0;
-  ballSpeed = 3;
+  ballSpeed = 4;
   groundY = height;
   ballSize = 15;
 }
@@ -81,6 +81,13 @@ void gameOverScreen(){
 
 void keyPressed(){
   if(gameOver && (key == 'r' | key == 'R')){
+    lives = 3;
+    score = 0;
+    gameOver = false;
+    ballX = random(width);
+    ballY = 0;
+    ballSpeed = 3;
+    loop();
   }
 }
 
