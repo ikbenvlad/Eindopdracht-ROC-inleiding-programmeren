@@ -20,12 +20,7 @@ void setup() {
 }
 
 void draw() {
-  background(0);
-  fill(255,255,255);
-  ellipse(ballX, ballY, ballSize * 1.5, ballSize * 1.5);
-  ballY = ballY + ballSpeed;
-  fill(255,0,0);
-  rect(paddleX, paddleY, paddleWidth, paddleHeight);
+  showHUD();
   
   textSize(16);
   fill(255);
@@ -45,6 +40,15 @@ void draw() {
   }
   
   movePaddle();
+}
+
+void showHUD(){
+  background(0);
+  fill(255,255,255);
+  ellipse(ballX, ballY, ballSize * 1.5, ballSize * 1.5);
+  ballY = ballY + ballSpeed;
+  fill(255,0,0);
+  rect(paddleX, paddleY, paddleWidth, paddleHeight);
 }
 
 void movePaddle(){
